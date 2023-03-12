@@ -13,14 +13,16 @@
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top" style="background-color: rgb(200, 227, 250);">
+        <nav id="nav" class="navbar fixed-top" style="background-color: rgb(200, 227, 250);">
             <div class="container-fluid ">
-            <a class="navbar-brand" href="#">THINKPRO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <a id="site-name" class="navbar-brand" href="#">THINKPRO</a>
+            <button id="dark-btn"  class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
+                <button id="dark-mode" class="btn btn-dark" onclick="dark()">Dark-Mode</button>
+                <button id="light-mode" class="btn " onclick="light()">light-Mode</button>
+                <div class="offcanvas-header bg-dark text-white "> 
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">THINKPRO</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -59,9 +61,7 @@
 </header>
 
 
-<img id="pic" src="thinkpro.png">
 
-<button onclick="fun()">press me</button>
 
 
 <!--custom js-->
