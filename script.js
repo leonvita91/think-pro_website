@@ -12,12 +12,12 @@ const enableDarkMode = () => {
     side_nav.style.backgroundColor = '#335980';
     let dark_nav = document.getElementById('nav');
     dark_nav.style.backgroundColor = '#335980';
-    let dark_text = document.getElementById('site-name');
-    dark_text.style.color = 'white';
-    let light_home = document.querySelector('.side-nav-home');
-    light_home.style.color = 'white';
-    let light_us = document.querySelector('.side-nav-aboutus');
-    light_us.style.color = 'white';
+    // change text color
+    const bright_text = document.querySelectorAll('.light');
+    bright_text.forEach((light) => {
+        light.style.color = 'white';
+    });
+
     let dark_btn = document.getElementById('dark-btn');
     dark_btn.style.backgroundColor = '#335980';
     // set localstorge key to enable
@@ -33,12 +33,13 @@ const disableDarkMode = () => {
     side_nav.style.backgroundColor = 'white';
     let dark_nav = document.getElementById('nav');
     dark_nav.style.backgroundColor = '#c8e3fa';
-    let dark_text = document.getElementById('site-name');
-    dark_text.style.color = 'black';
-    let light_text = document.querySelector('.side-nav-home');
-    light_text.style.color = 'black';
-    let light_us = document.querySelector('.side-nav-aboutus');
-    light_us.style.color = 'black';
+    
+     // change text color
+     const bright_text = document.querySelectorAll('.light');
+     bright_text.forEach((light) => {
+         light.style.color = 'black';
+     });
+
     let dark_btn = document.getElementById('dark-btn');
     dark_btn.style.backgroundColor = '#c8e3fa';
     // set localstorge key to null 
@@ -56,12 +57,16 @@ DarkMode_toggle.addEventListener('click', () => {
     darkMode = localStorage.getItem('DarkMode');
     if (darkMode !== 'enable') {
         enableDarkMode();
-        console.log(darkMode)
+
     } else {
         disableDarkMode();
-        console.log(darkMode)
+
     };
 });
+
+
+
+
 
 
 
