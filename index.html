@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav id="nav" class="navbar fixed-top" style="background-color: rgb(200, 227, 250);">
+        <nav id="nav" class="navbar fixed-top" style="background-color: #c8e3fa;">
             <div class="container-fluid ">
             <img src="thinkpro.png" class="rounded-5" style="width: 50px;height:50px;">
             <a id="site-name" class="navbar-brand" href="#">THINKPRO</a>
@@ -21,19 +21,19 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <button id="dark-mode" class="btn btn-dark" onclick="dark()">Dark-Mode</button>
-                <button id="light-mode" class="btn " onclick="light()">light-Mode</button>
+                <button id="dark-mode" class="btn btn-dark">Dark-Mode</button>
+                
                 <div class="offcanvas-header bg-dark text-white "> 
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">THINKPRO</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div id='side-nav-body' class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <li  class="nav-item">
+                    <a class="nav-link active side-nav-home" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link side-nav-aboutus" href="#">About Us</a>
                     </li>
                 <!--in case you want to add dropdown or search bar 
                     <li class="nav-item dropdown">
@@ -61,6 +61,20 @@
 </nav>
 </header>
   
+
+<!--
+    change font
+    <h1 id="head">this is headline</h1>
+    <button onclick="demo()" class="btn btn-dark">press me</button>
+
+
+    
+    change links with js
+    <button onclick="change_links()" class="btn btn-dark">press me to change link</button>
+    <a id="links" class="btn btn-primary" href="https://google.com">link</a>    
+    
+-->
+
 <!--custom js-->
 <script src="script.js"></script>
 <!--Bootstrap js-->
