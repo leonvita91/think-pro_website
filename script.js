@@ -5,6 +5,8 @@ let darkMode = localStorage.getItem('DarkMode');
 const DarkMode_toggle = document.querySelector('#dark-mode');
 
 const enableDarkMode = () => {
+
+    document.querySelector('#dark-mode').src="brightness.png";
     // add dark-mode when it enable
     let dark_mode = document.body;
     dark_mode.style.backgroundColor = '#1d2a35';
@@ -26,6 +28,8 @@ const enableDarkMode = () => {
 };
 
 const disableDarkMode = () => {
+    
+    document.querySelector('#dark-mode').src="night-mode.png";
     // add dark-mode when it enable
     let dark_mode = document.body;
     dark_mode.style.backgroundColor = 'white';
