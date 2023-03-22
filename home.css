@@ -5,6 +5,23 @@ body {
 }
 
 
+
 .rotation {
-    background-color: rgb(204, 255, 0);
-};
+    animation: loader 1.25s infinite; 
+    animation-iteration-count: 6;
+    background-color: rgba(255, 255, 255, 0.442);
+    color: #00136c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes loader {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      border-radius: 50%;
+      rotate: 360deg;
+    }
+  }

@@ -65,15 +65,16 @@ DarkMode_toggle.addEventListener('click', () => {
         enableDarkMode();
         
         $(function(){
-            $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(150);
+            $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(500);
             $('#dark-mode').animate({padding: '0px'});
-            $('#dark-mode').addClass('rotation');
+            $('#dark-mode').addClass('rotation').fadeIn(1000);
             
         });
 
     } else {
         disableDarkMode();
-        $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(150);
+        $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(1000);
+        $('#dark-mode').addClass('rotation').fadeIn(500);
         $('#dark-mode').animate({padding: '0px'});
     };
 });
