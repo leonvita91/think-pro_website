@@ -74,46 +74,15 @@ DarkMode_toggle.addEventListener('click', () => {
     } else {
         disableDarkMode();
         $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(1000);
-        $('#dark-mode').addClass('rotation').fadeIn(500);
+        $('#dark-mode').addClass('dark-rotation').fadeIn(500);
         $('#dark-mode').animate({padding: '0px'});
     };
 });
 
+// AboutUs page
+$(function() {
+    $('#ayoub').hide(500).fadeOut(2000).fadeIn(2000);
+    $('#ayoub').addClass('user-rotation');
 
-/*
-function dark () {
-  
-    let dark_mode = document.body;
-    dark_mode.style.backgroundColor = '#1d2a35';
-    let dark_nav = document.getElementById('nav');
-    dark_nav.style.backgroundColor = '#0d1721';
-    let dark_text = document.getElementById('site-name');
-    dark_text.style.color = 'white';
-    let dark_btn = document.getElementById('dark-btn');
-    dark_nav.style.backgroundColor = '#335980';
-};
-*/
-/*
-change font
-function demo () {
-    let f = document.getElementById('head')
-    f.style.fontFamily = 'Impact,Charcoal,sans-serif'
-}
 
-change links:
-change images:
-function fun () {
-    var img = document.getElementById('pic');
-    img.src = 'bg1.jpg';
-    
-    function fun () {
-        var img = document.getElementById('pic');
-        img.src = 'bg1.jpg';
-    }
-}
-function change_links () {
-    let lin = 'https://www.facebook.com';
-    document.getElementById('links').href = lin;
-    
-};
-*/
+});
