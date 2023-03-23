@@ -39,7 +39,7 @@ footer {
 
 /*About Us Page Css*/
 
-h1 {
+#about-us {
   position: relative;
 }
 
@@ -78,7 +78,7 @@ h1 {
   transform: translateY(-80px);
 }
 
-img {
+#user-img {
   width: 100%;
   border-radius: 50%;
   box-shadow: 0 0 22px #3336;
@@ -108,3 +108,5 @@ img {
 #profile-card:hover a {
   color: white;
 }
+
+
