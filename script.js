@@ -9,7 +9,7 @@ const DarkMode_toggle = document.querySelector('#dark-mode');
 
 const enableDarkMode = () => {
     
-    document.querySelector('#dark-mode').src="light.png";
+    document.querySelector('#dark-mode').src="img/light.png";
 
     
     // add dark-mode when it enable
@@ -33,7 +33,7 @@ const enableDarkMode = () => {
 };
 
 const disableDarkMode = () => {
-    document.querySelector('#dark-mode').src="dark.png";
+    document.querySelector('#dark-mode').src="img/dark.png";
     // add dark-mode when it enable
     let dark_mode = document.body;
     dark_mode.style.backgroundColor = 'white';
@@ -79,10 +79,10 @@ DarkMode_toggle.addEventListener('click', () => {
     };
 });
 
-// AboutUs page
+
+
+// Jquery About us page
 $(function() {
-    $('#ayoub').hide(500).fadeOut(2000).fadeIn(2000);
+    $('#ayoub').hide(500).fadeOut(4000).fadeIn(4000);
     $('#ayoub').addClass('user-rotation');
-
-
 });
