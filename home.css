@@ -5,18 +5,19 @@ body {
 }
 
 main {
-  width: 90vw;
+  width: 100vw;
   min-height: calc(100vh - 66px - 30px );
 }
 
 /*  Gridsys */
 .grid-container {
+  margin: 0 auto;
   color: white;
   display: grid;
-  height:60vh;
-  width: 100vw;
-  justify-content: start;
-  align-items: center center;
+  height:80vh;
+  width: 80vw;
+  gap: 5px;
+  border: 1px solid red;
   grid-template-columns: repeat(2 , 1fr);
   grid-template-rows: repeat(2, 2fr);
   grid-template-areas:
@@ -26,6 +27,7 @@ main {
 
 
 #content1 {
+  text-align: center;
   grid-area: contentA;
   background-color: #00136c;
 }
