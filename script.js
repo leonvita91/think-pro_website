@@ -1,7 +1,7 @@
 
-
 // read the key value from localstorge
 let darkMode = localStorage.getItem('DarkMode');
+
 
 const DarkMode_toggle = document.querySelector('#dark-mode');
 
@@ -29,7 +29,6 @@ const enableDarkMode = () => {
     dark_btn.style.backgroundColor = '#335980';
     // set localstorge key to enable
     localStorage.setItem('DarkMode','enable');
-
 };
 
 const disableDarkMode = () => {
@@ -54,8 +53,10 @@ const disableDarkMode = () => {
 
 if (darkMode === 'enable'){
     enableDarkMode();
+
 }else {
     disableDarkMode();
+
 };
 
 
@@ -78,6 +79,8 @@ DarkMode_toggle.addEventListener('click', () => {
         $('#dark-mode').animate({padding: '0px'});
     };
 });
+
+
 
 
 

@@ -1,19 +1,75 @@
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
     height: 100vh;
     margin: 0;
-    padding-top: 70px;
+    padding-top: 80px;
 }
 
 main {
   width: 90vw;
-  min-height: calc(100vh - 66px - 360px );
+  min-height: calc(100vh - 66px - 30px );
 }
+
+/*  Gridsys */
+.grid-container {
+  color: white;
+  display: grid;
+  width: 100vw;
+  padding: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "empty-left contentA contentA empty-right"
+  "empty-left contentB contentC empty-right";
+  height:60vh;
+}
+
+#empty-side-left {
+  grid-area: empty-left;
+}
+
+#empty-side-right{
+  grid-area: empty-right;
+}
+
+#content1 {
+  grid-area: contentA;
+  background-color: rgb(23, 54, 64);
+}
+
+#content2 {
+  grid-area: contentB;
+  background-color: green;
+}
+
+
+#content3 {
+  grid-area: contentC;
+  background-color: teal;
+
+}
+
+/* Media Query section */
+
+@media only screen and (max-width:472px ){ 
+    .grid-container{
+      display: grid;
+      height:100vh;
+      width: 100vw;
+      padding: 20px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10fr 5fr 5fr;
+      grid-template-areas: 
+      "contentA"
+      "contentB"
+      "contentC";
+    }
+    #content2 {
+      background-color: #00136c;
+    }
+
+  }
+
+
 
 
 .dark-rotation {
@@ -35,6 +91,13 @@ main {
     rotate: 360deg;
   }
 }
+
+
+
+
+
+
+
 
 /*About Us Page Css*/
 
@@ -107,29 +170,3 @@ main {
   animation-iteration-count: 1;
 }
 
-
-.flx {
-  display: flex;
-  height: 50px;
-  width: 20rem;
-
-}
-
-#img1 {
-  border: gold solid;
-  color: aquamarine;
-  background-color: grey;
-
-}
-
-#img2 {
-  border: gold solid;
-  color: aquamarine;
-  background-color: rgb(23, 101, 95);
-}
-
-#img3 {
-  border: gold solid;
-  color: aquamarine;
-  background-color: darkkhaki;
-}
