@@ -13,36 +13,31 @@ main {
 .grid-container {
   color: white;
   display: grid;
-  width: 100vw;
-  padding: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-  "empty-left contentA contentA empty-right"
-  "empty-left contentB contentC empty-right";
   height:60vh;
+  width: 100vw;
+  justify-content: start;
+  align-items: center center;
+  grid-template-columns: repeat(2 , 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-areas:
+  "contentA contentA"
+  "contentB contentC";
 }
 
-#empty-side-left {
-  grid-area: empty-left;
-}
-
-#empty-side-right{
-  grid-area: empty-right;
-}
 
 #content1 {
   grid-area: contentA;
-  background-color: rgb(23, 54, 64);
+  background-color: #00136c;
 }
 
 #content2 {
+  text-align: center;
   grid-area: contentB;
   background-color: green;
 }
 
-
 #content3 {
+  text-align: center;
   grid-area: contentC;
   background-color: teal;
 
@@ -50,7 +45,7 @@ main {
 
 /* Media Query section */
 
-@media only screen and (max-width:472px ){ 
+@media only screen and (max-width:576px ){ 
     .grid-container{
       display: grid;
       height:100vh;
