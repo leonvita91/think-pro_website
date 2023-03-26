@@ -1,68 +1,76 @@
 body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     height: 100vh;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 65px;
 }
 
 main {
+
+  background-color: ;
   width: 100vw;
   min-height: calc(100vh - 66px - 30px );
 }
 
 /*  Gridsys */
 .grid-container {
-  margin: 0 auto;
+  margin: 0;
   color: white;
+  width: 100vw;
   display: grid;
-  height:80vh;
-  width: 80vw;
-  gap: 5px;
-  border: 1px solid red;
-  grid-template-columns: repeat(2 , 1fr);
-  grid-template-rows: repeat(2, 2fr);
-  grid-template-areas:
-  "contentA contentA"
-  "contentB contentC";
+  grid-template-columns: repeat(1 , 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas:"contentA" ;
 }
 
 
-#content1 {
-  text-align: center;
+#main-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  width: 100vw;
+  height: 85vh;
   grid-area: contentA;
-  background-color: #00136c;
-}
-
-#content2 {
   text-align: center;
-  grid-area: contentB;
-  background-color: green;
 }
 
-#content3 {
-  text-align: center;
-  grid-area: contentC;
-  background-color: teal;
-
+#para-container {
+  position: absolute;
+  max-width: 500px;
+  max-height: 250px;
+  background-color: yellowgreen;
+  opacity: 80%;
+  top: 100px;
+  right: 100px;
+  overflow: scroll;
 }
+
 
 /* Media Query section */
 
 @media only screen and (max-width:576px ){ 
-    .grid-container{
-      display: grid;
-      height:100vh;
-      width: 100vw;
-      padding: 20px;
-      grid-template-columns: 1fr;
-      grid-template-rows: 10fr 5fr 5fr;
-      grid-template-areas: 
-      "contentA"
-      "contentB"
-      "contentC";
-    }
-    #content2 {
-      background-color: #00136c;
-    }
+  .grid-container{
+    display: grid;
+    height:100vh;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "contentA";
+  }
+    
+  #para-container {
+    position: absolute;
+    max-width: 250px;
+    max-height: 250px;
+    background-color: yellowgreen;
+    opacity: 80%;
+    top: 100px;
+    right: 0;
+    overflow: scroll;
+  }
 
   }
 
