@@ -14,11 +14,15 @@ const enableDarkMode = () => {
             this.bg_color = bg_color
             const bg = document.querySelector(this.className)
             bg.style.backgroundColor = this.bg_color
+            
+            localStorage.setItem('DarkMode','enable');
         }
     }
+    const body = new en.dark("body","#1d2a35");
+    const nav =  new en.dark(".fst-dark-bg","#335980");
+    //const side =  new en.dark("","");
 
-    localStorage.setItem('DarkMode','enable');
-    new en.dark(".fst-dark-bg","green");
+
 };
 
 const disableDarkMode = () => {
@@ -47,6 +51,51 @@ if (darkMode === 'enable'){
     disableDarkMode();
 
 };
+
+
+/*
+Color section 
+// add dark-mode when it enable
+    let dark_mode = document.body;
+    dark_mode.style.backgroundColor = '#1d2a35';
+    let side_nav = document.getElementById('side-nav-body');
+    side_nav.style.backgroundColor = '#335980';
+    let dark_nav = document.getElementById('nav');
+    dark_nav.style.backgroundColor = '#335980';
+    // change text color
+    const bright_text = document.querySelectorAll('.light');
+    bright_text.forEach((light) => {
+        light.style.color = 'white';
+    });
+
+    let dark_btn = document.getElementById('dark-btn');
+    dark_btn.style.backgroundColor = '#335980';
+    // set localstorge key to enable
+    localStorage.setItem('DarkMode','enable');
+};
+
+const disableDarkMode = () => {
+    document.querySelector('#dark-mode').src="img/dark.png";
+    // add dark-mode when it enable
+    let dark_mode = document.body;
+    dark_mode.style.backgroundColor = 'white';
+    let side_nav = document.getElementById('side-nav-body');
+    side_nav.style.backgroundColor = 'white';
+    let dark_nav = document.getElementById('nav');
+    dark_nav.style.backgroundColor = '#c8e3fa';
+     // change text color
+     const bright_text = document.querySelectorAll('.light');
+     bright_text.forEach((light) => {
+         light.style.color = 'black';
+     });
+    let dark_btn = document.getElementById('dark-btn');
+    dark_btn.style.backgroundColor = '#c8e3fa';
+*/
+
+
+
+
+
 
 
 DarkMode_toggle.addEventListener('click', () => {
