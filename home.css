@@ -6,8 +6,7 @@ body {
 }
 
 main {
-
-  background-color: ;
+  
   width: 100vw;
   min-height: calc(100vh - 66px - 30px );
 }
@@ -18,32 +17,29 @@ main {
   color: white;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(1 , 1fr);
+  grid-template-columns: repeat(4);
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas:"contentA" ;
+
 }
 
 
 #main-content {
+  width: 100%;
+  height: 80vh;
   position: relative;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  object-position: center;
-  width: 100vw;
-  height: 85vh;
   grid-area: contentA;
-  text-align: center;
 }
 
 #para-container {
+  
   position: absolute;
   max-width: 500px;
   max-height: 250px;
   background-color: yellowgreen;
   opacity: 80%;
-  top: 100px;
-  right: 100px;
+  top: 10rem;
+  right: 10rem;
   overflow: scroll;
 }
 
