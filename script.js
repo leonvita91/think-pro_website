@@ -1,13 +1,11 @@
 
 // read the key value from localstorge
-
 let darkMode = localStorage.getItem('DarkMode');
 const DarkMode_toggle = document.querySelector('#dark-mode');
-
-
+// Enable darkmode
 const enableDarkMode = () => {
-    // orginize JS
     document.querySelector('#dark-mode').src="img/light.png";
+    // choose class and backgroud color
     const en = {
         dark : function (className,bg_color) {
             this.className = className
@@ -18,11 +16,18 @@ const enableDarkMode = () => {
             localStorage.setItem('DarkMode','enable');
         }
     }
-    const body = new en.dark("body","#1d2a35");
-    const nav =  new en.dark(".fst-dark-bg","#335980");
-    //const side =  new en.dark("","");
-
-
+    // looping throgh class and colors
+    let class_names = [
+    '.fst-dark-bg',
+    'body',
+    '.side-dark-body'
+]
+    let colors_names = [
+    '#335980','#1d2a35','#335980'
+]
+    for (let i = 0; i < 3; i++){
+         new en.dark(class_names[i],colors_names[i]);
+    }
 };
 
 const disableDarkMode = () => {
@@ -36,67 +41,27 @@ const disableDarkMode = () => {
             selector.style.backgroundColor = this.bg_color
         }
     }
-    new dis.light('.fst-dark-bg','red')
 
-    let dark_btn = document.getElementById('dark-btn');
-    dark_btn.style.backgroundColor = '#c8e3fa';
-    // set localstorge key to null 
+    // looping throgh class and colors
+    let class_names = [
+        '.fst-dark-bg',
+        'body',
+        '.side-dark-body',
+    ]
+        let colors_names = [
+        '#ffffff','#ffffff','#ffffff'
+    ]
+        for (let i = 0; i < 3; i++){
+            new dis.light(class_names[i],colors_names[i]);
+        }
     localStorage.setItem('DarkMode',null);
 };
 
 if (darkMode === 'enable'){
     enableDarkMode();
-
 }else {
     disableDarkMode();
-
 };
-
-
-/*
-Color section 
-// add dark-mode when it enable
-    let dark_mode = document.body;
-    dark_mode.style.backgroundColor = '#1d2a35';
-    let side_nav = document.getElementById('side-nav-body');
-    side_nav.style.backgroundColor = '#335980';
-    let dark_nav = document.getElementById('nav');
-    dark_nav.style.backgroundColor = '#335980';
-    // change text color
-    const bright_text = document.querySelectorAll('.light');
-    bright_text.forEach((light) => {
-        light.style.color = 'white';
-    });
-
-    let dark_btn = document.getElementById('dark-btn');
-    dark_btn.style.backgroundColor = '#335980';
-    // set localstorge key to enable
-    localStorage.setItem('DarkMode','enable');
-};
-
-const disableDarkMode = () => {
-    document.querySelector('#dark-mode').src="img/dark.png";
-    // add dark-mode when it enable
-    let dark_mode = document.body;
-    dark_mode.style.backgroundColor = 'white';
-    let side_nav = document.getElementById('side-nav-body');
-    side_nav.style.backgroundColor = 'white';
-    let dark_nav = document.getElementById('nav');
-    dark_nav.style.backgroundColor = '#c8e3fa';
-     // change text color
-     const bright_text = document.querySelectorAll('.light');
-     bright_text.forEach((light) => {
-         light.style.color = 'black';
-     });
-    let dark_btn = document.getElementById('dark-btn');
-    dark_btn.style.backgroundColor = '#c8e3fa';
-*/
-
-
-
-
-
-
 
 DarkMode_toggle.addEventListener('click', () => {
     darkMode = localStorage.getItem('DarkMode');
@@ -117,10 +82,6 @@ DarkMode_toggle.addEventListener('click', () => {
         $('#dark-mode').animate({padding: '0px'});
     };
 });
-
-
-
-
 
 // Jquery About us page
 $(function() {
