@@ -5,17 +5,26 @@ const DarkMode_toggle = document.querySelector('#dark-mode');
 // Enable darkmode
 const enableDarkMode = () => {
     document.querySelector('#dark-mode').src="img/light.png";
-    // choose class and backgroud color
+    // object for class names,bg-color and text colors
     const en = {
-        dark : function (className,bg_color) {
+        selector : localStorage.setItem('DarkMode','enable'),
+        dark_bg : function  (className,bg_color) {
             this.className = className
             this.bg_color = bg_color
-            const bg = document.querySelector(this.className)
-            bg.style.backgroundColor = this.bg_color
+            const dark_bg = document.querySelector(this.className)
+            dark_bg.style.backgroundColor = this.bg_color
             
-            localStorage.setItem('DarkMode','enable');
-        }
+        },
+        dark_text : function  (class_text,color_text) {
+            this.class_text = class_text
+            this.color_text = color_text
+            const text = document.querySelector(this.class_text)
+            text.style.color = this.color_text
+        },
     }
+
+    //new en.dark_text('.logo-color' , 'white')
+
     // looping throgh class and colors
     let class_names = [
     '.fst-dark-bg',
@@ -26,13 +35,12 @@ const enableDarkMode = () => {
     '#335980','#1d2a35','#335980'
 ]
     for (let i = 0; i < 3; i++){
-         new en.dark(class_names[i],colors_names[i]);
+         new en.dark_bg(class_names[i],colors_names[i]);
     }
 };
 
 const disableDarkMode = () => {
     document.querySelector('#dark-mode').src="img/dark.png";
-
     const dis = {
         light : function (className,bg_color) {
             this.className = className
