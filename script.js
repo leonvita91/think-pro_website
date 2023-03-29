@@ -1,50 +1,62 @@
-
-
-
 // Create OOP 
+
+
+// Fucking confusing //
 
 class Dark_mode {
     constructor() {
         //initialize 
         this.status = localStorage.getItem('DarkMode');
-        console.log(this.status)
-        //call methods
-        this.enableDarkMode()
-        // this.disableDarkMode()
-        
+        // should call for if statment to checking which mode is on
+        if (this.status === 'Dark-Mode-Activeated'){
+            this.DarkMode_toggle = document.querySelector('#Switch-Mode');
+            this.DarkMode_toggle.addEventListener('click', () => {
+                this.enableDarkMode();
+                // add aninmation to Switching
+                $(function(){
+                    $('#Switch-Mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(500);
+                    $('#Switch-Mode').animate({padding: '0px'});
+                    $('#Switch-Mode').addClass('rotation').fadeIn(1000);
+                });
+            });
+            // end method
+        } else if (this.status === 'Disable') {
+                this.Light_toggle = document.querySelector('#Switch-Mode');
+                this.Light_toggle.addEventListener('click', () => {
+                    this.disableDarkMode();
+            })
+        }
+            
     };
 
     enableDarkMode () {
             document.querySelector('#Switch-Mode').src="img/light.png";
-            this.DarkMode_toggle = document.querySelector('#Switch-Mode');
-            this.status = localStorage.setItem('DarkMode','Dark-Mode-Activeated');
+            localStorage.setItem('DarkMode','Dark-Mode-Activeated');
+            console.log(this.status , `enable status`)
+            // add the customzation for colors
 
-            this.DarkMode_toggle.addEventListener('click', () => {
-            if (this.status !== 'Dark-Mode-Activeated') {
-                    enableDarkMode();
-                    $(function(){
-                            $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(500);
-                            $('#dark-mode').animate({padding: '0px'});
-                            $('#dark-mode').addClass('rotation').fadeIn(1000);
-                        });
+                // animation on click will happen 
                 
-                    } else {
-                            disableDarkMode();
-                            console.log('testing disable working')
-                            $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(1000);
-                            $('#dark-mode').addClass('dark-rotation').fadeIn(500);
-                            $('#dark-mode').animate({padding: '0px'});
-                        };
-                    });
-        }
+                
+                // } else {
+                //         disableDarkMode();
+                //         console.log('testing disable working')
+                //         $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(1000);
+                //         $('#dark-mode').addClass('dark-rotation').fadeIn(500);
+                //         $('#dark-mode').animate({padding: '0px'});
+                //     };
+                // });
 
-        disableDarkMode = () => {
-            document.querySelector('#Switch-Mode').src="img/dark.png";
-            
-            localStorage.setItem('DarkMode',null);
-        };
+            // if (this.status !== 'Dark-Mode-Activeated') {
+            //         // this.enableDarkMode();
+            // }
+        };          
+    disableDarkMode = () => {
+        document.querySelector('#Switch-Mode').src="img/dark.png";
+        localStorage.setItem('DarkMode','Disable');
 
-                    
+        console.log(this.status , `Disable status`)
+    }
 }
 
 obj = new Dark_mode()
