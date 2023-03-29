@@ -6,21 +6,22 @@
 class Dark_mode {
     constructor() {
         //initialize 
-        const status = localStorage.getItem('DarkMode');
-        console.log(status)
+        this.status = localStorage.getItem('DarkMode');
+        console.log(this.status)
         //call methods
         this.enableDarkMode()
-        //this.disableDarkMode()
+        // this.disableDarkMode()
         
-    }
-    
+    };
+
     enableDarkMode () {
-            this.status = localStorage.getItem('DarkMode');
-            .addEventListener('click', () => {
-            console.log(this.status , `mew is enable`)
-            if (darkMode !== 'enable') {
+            document.querySelector('#Switch-Mode').src="img/light.png";
+            this.DarkMode_toggle = document.querySelector('#Switch-Mode');
+            this.status = localStorage.setItem('DarkMode','Dark-Mode-Activeated');
+
+            this.DarkMode_toggle.addEventListener('click', () => {
+            if (this.status !== 'Dark-Mode-Activeated') {
                     enableDarkMode();
-                    console.log('testing work')
                     $(function(){
                             $('#dark-mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(500);
                             $('#dark-mode').animate({padding: '0px'});
@@ -36,6 +37,13 @@ class Dark_mode {
                         };
                     });
         }
+
+        disableDarkMode = () => {
+            document.querySelector('#Switch-Mode').src="img/dark.png";
+            
+            localStorage.setItem('DarkMode',null);
+        };
+
                     
 }
 
