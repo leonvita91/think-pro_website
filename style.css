@@ -1,0 +1,32 @@
+body {
+  font-family:Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.Gridsys {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 3.5rem 1fr 1fr 1fr;
+  grid-template-areas:
+  "nav nav nav nav"
+  "main main main main"
+  "main main main main"
+  "footer footer footer footer"
+  ;
+  gap:10px;
+}
+
+.Nav {
+  background-color: aquamarine;
+  grid-area: nav;
+}
+.main-content {
+  background-color: rgb(22, 73, 56);
+  grid-area: main ;
+}
+.footer {
+  background-color: rgb(10, 46, 34);
+  grid-area: footer;
+}
