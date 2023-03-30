@@ -1,17 +1,15 @@
 body {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
     height: 100vh;
     margin: 0;
     padding-top: 65px;
 }
 
 main {
-  
   width: 100vw;
   min-height: calc(100vh - 66px - 30px );
 }
-
-/*  Gridsys */
+/* Gridsys */
 .grid-container {
   margin: 0;
   color: white;
@@ -19,20 +17,17 @@ main {
   display: grid;
   grid-template-columns: repeat(4);
   grid-template-rows: repeat(1, 1fr);
-  grid-template-areas:"contentA" ;
-
+  grid-template-areas:"contentA";
 }
 
-
 #main-content {
+  max-height: 90vh;
   width: 100vw;
-  height: 80vh;
-  position: relative;
+  object-fit: cover;
   grid-area: contentA;
 }
 
 #para-container {
-  
   position: absolute;
   max-width: 500px;
   max-height: 250px;
@@ -43,9 +38,7 @@ main {
   overflow: scroll;
 }
 
-
 /* Media Query section */
-
 @media only screen and (max-width:576px ){ 
   .grid-container{
     display: grid;
