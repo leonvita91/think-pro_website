@@ -12,24 +12,22 @@ body {
   grid-auto-rows: minmax(100px , auto);
   height: 100vh;
   grid-template-areas: 
-  "nav nav nav"
-  "main main main"
-  "footer footer footer"
-  ;
+  "naving naving naving "
+  "mid mid mid"
+  "foot foot foot";
   gap:10px; 
 }
 .naving {
-  padding: 1em;
   background-color: aquamarine;
-  grid-area: nav;
+  grid-area: naving;
 }
 .mid {
   background-color: rgb(64, 208, 36);
-  grid-area: main;
+  grid-area: mid;
 
 }
 .foot {
   background-color: rgb(180, 171, 229);
-  grid-area: footer;
+  grid-area: foot;
 
 }
