@@ -5,11 +5,12 @@ body {
   padding: 0;
 }
 
-.Gridsys {
+.gridsys {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50px 1fr auto;
   grid-auto-rows: minmax(100px , auto);
+  height: 100vh;
   grid-template-areas: 
   "nav nav nav"
   "main main main"
@@ -17,18 +18,17 @@ body {
   ;
   gap:10px; 
 }
-
-.Nav .grid-nav {
+.naving {
   padding: 1em;
   background-color: aquamarine;
   grid-area: nav;
 }
-.main-content {
-  background-color: rgb(211, 231, 207);
+.mid {
+  background-color: rgb(64, 208, 36);
   grid-area: main;
 
 }
-.f-container {
+.foot {
   background-color: rgb(180, 171, 229);
   grid-area: footer;
 
