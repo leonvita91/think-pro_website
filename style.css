@@ -18,7 +18,7 @@ body {
   gap:10px; 
 }
 
-.Nav {
+.Nav .grid-nav {
   padding: 1em;
   background-color: aquamarine;
   grid-area: nav;
