@@ -16,14 +16,16 @@ body {
   gap:10px; 
 }
 .naving {
-  background-color: aquamarine;
+
   grid-area: naving;
 }
 .mid {
-  background-color: rgb(64, 208, 36);
+  position: absolute;
+  background-color: rgb(98, 217, 118);
   grid-area: mid;
-
 }
+
+
 .foot {
   background-color: rgb(180, 171, 229);
   grid-area: foot;
