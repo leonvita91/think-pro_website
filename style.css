@@ -17,19 +17,15 @@ body {
   gap:10px;
 }
 
-
-
 /* Naving section */
 
 .naving {
-
   grid-area: naving;
 }
 
 /* Mid section */
 
 .mid{
-  background-color: rgb(98, 215, 217);
   grid-area: mid;
 }
 
@@ -59,7 +55,6 @@ body {
 /* footer section */
 
 .foot {
-  background-color: rgb(229, 171, 178);
   grid-area: foot;
 
 }
