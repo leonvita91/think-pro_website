@@ -3,6 +3,7 @@ body {
   margin: 0;
 }
 
+/* Main grid */
 .gridsys {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,21 +14,52 @@ body {
   "naving naving naving "
   "mid mid mid"
   "foot foot foot";
-  gap:10px; 
+  gap:10px;
 }
+
+
+
+/* Naving section */
+
 .naving {
 
   grid-area: naving;
 }
-.mid {
-  position: absolute;
-  background-color: rgb(98, 217, 118);
+
+/* Mid section */
+
+.mid{
+  background-color: rgb(98, 215, 217);
   grid-area: mid;
 }
 
+.img-container {
+  position: relative;
+  text-align: center;
+}
+
+.para-container {
+  overflow: scroll;
+  height: 40%;
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 85%;
+  transform: translate(-85%, -30%);
+  color: white;
+}
+.para-container h1 {
+  background-color: rgb(79, 121, 121);
+}
+.para-container p {
+  background-color: rgb(75, 92, 80);
+}
+
+
+/* footer section */
 
 .foot {
-  background-color: rgb(180, 171, 229);
+  background-color: rgb(229, 171, 178);
   grid-area: foot;
 
 }
