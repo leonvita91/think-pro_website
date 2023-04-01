@@ -6,15 +6,15 @@ body {
 /* Main grid */
 .gridsys {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50px 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:  repeat(3,1fr);
   grid-auto-rows: minmax(100px , auto);
   height: 100vh;
+  align-items: center;
   grid-template-areas: 
-  "naving naving naving "
-  "mid mid mid"
-  "foot foot foot";
-  gap:10px;
+  "naving naving naving naving "
+  "mid mid mid mid"
+  "foot foot foot foot";
 }
 
 /* Naving section */
@@ -22,6 +22,7 @@ body {
 .naving {
   grid-area: naving;
 }
+
 
 /* Mid section */
 
@@ -36,19 +37,35 @@ body {
 
 .para-container {
   overflow: scroll;
+  position: absolute;
   height: 40%;
   width: 30%;
-  position: absolute;
   top: 30%;
   left: 85%;
   transform: translate(-85%, -30%);
   color: white;
 }
 .para-container h1 {
+  position: sticky;
+  top:0;
   background-color: rgb(79, 121, 121);
 }
 .para-container p {
   background-color: rgb(75, 92, 80);
+}
+
+
+.side-container {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+
+  transform: translate(-0%, -200%);
+  gap: 50px;
+}
+
+.side-container a {
+
 }
 
 
@@ -57,4 +74,38 @@ body {
 .foot {
   grid-area: foot;
 
+}
+
+
+/* animations */
+
+.rotations {
+  animation: rotate-icons 3s linear 2;
+}
+@keyframes rotate-icons {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.facebook {
+  animation: animate-icons 1s linear 1;
+}
+@keyframes animate-icons {
+  0% {
+    padding-left: 50px;
+    transform: rotate(0deg);
+  }
+  50% {
+    padding-left: 20px;
+    transform: rotate(180deg);
+  }
+  100% {
+    padding-left: 0px;
+    transform: rotate(360deg);
+  }
 }
