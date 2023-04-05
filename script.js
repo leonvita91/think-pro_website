@@ -17,10 +17,20 @@ class DarkMode {
         // set dark-mode option 
         this.status = localStorage.setItem('enable','DarkMode');
         // switch to dark-logo
-        this.icon = document.querySelector('#Switch-Mode').src="icons/home/dark.png";
+        this.icon = document.querySelector('#Switch-Mode').src="icons/home/light.png";
         // Define the Classes_background and Colors
-        this.classList = ['.Dark-nav','.darkmode-body','.side-dark-body']
-        this.colorList = ['#1d2a35','#0d1721','#15202b']
+        this.classList = [
+        '.Dark-nav',
+        '.darkmode-body',
+        '.side-dark-body',
+        '.para-container h1',
+        '.para-container p']
+        this.colorList = [
+        '#1d2a35',
+        '#0d1721',
+        '#15202b',
+        '#1d2a35',
+        '#1d2a35']
         //  Apply Looping
         for (let i =0; i < this.classList.length;i++) {
             this.selector_class = document.querySelector(this.classList[i]);
@@ -40,11 +50,11 @@ class DarkMode {
         })
     }
     disableDark() {
-        this.icon = document.querySelector('#Switch-Mode').src="icons/home/light.png";
+        this.icon = document.querySelector('#Switch-Mode').src="icons/home/dark.png";
         this.status = localStorage.setItem('enable','LightMode');
         // Define the Classes_background and Colors
-        this.classList = ['.Dark-nav','.darkmode-body','.side-dark-body']
-        this.colorList = ['#5800FF','#0096FF','#00D7FF']
+        this.classList = ['.Dark-nav','.darkmode-body','.side-dark-body','.para-container h1']
+        this.colorList = ['#5800FF','#0096FF','#00D7FF','green']
         //  Apply Looping
         for (let i =0; i < this.classList.length;i++) {
             this.selector_class = document.querySelector(this.classList[i]);

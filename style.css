@@ -6,27 +6,29 @@ body {
 /* Main grid */
 .gridsys {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:  repeat(3,1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:  60px 1fr 1fr ;
   grid-auto-rows: minmax(100px , auto);
   height: 100vh;
   align-items: center;
   grid-template-areas: 
-  "naving naving naving naving "
+  "naving naving naving naving"
   "mid mid mid mid"
   "foot foot foot foot";
 }
 
 /* Naving section */
 
-.naving {
+.naving{
+  z-index: 1;
+  position: sticky;
+  top:0;
   grid-area: naving;
 }
 
 
 /* Mid section */
-
-.mid{
+.middel{
   grid-area: mid;
 }
 
@@ -48,23 +50,52 @@ body {
 .para-container h1 {
   position: sticky;
   top:0;
-  background-color: rgb(79, 121, 121);
+
 }
 .para-container p {
-  background-color: rgb(75, 92, 80);
+
 }
 
 
 .side-container {
-  position: sticky;
+  position: fixed;
+  top: 10%;
   display: flex;
   flex-direction: column;
-
-  transform: translate(-0%, -200%);
   gap: 50px;
 }
 
-.side-container a {
+@media only screen and (max-width: 572px) {
+  .side-container {
+    top: 7%;
+    gap: 10px;
+  }
+  .side-container img {
+    background-color: rgb(255, 255, 255);
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .para-container {
+    overflow: scroll;
+    position: absolute;
+    height: 80%;
+    width: 40%;
+    top: 30%;
+    left: 95%;
+    font-size: small;
+    transform: translate(-95%, -30%);
+    color: white;
+  }
+  .para-container h1 {
+    position: sticky;
+    top:0;
+    background-color: rgb(120, 79, 121, 0.9);
+  }
+  .para-container p {
+    background-color: rgb(105, 90, 106, 0.9);
+  }
+  
 
 }
 
