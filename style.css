@@ -38,6 +38,7 @@ body {
 }
 
 .para-container {
+  border-radius: 2rem;
   overflow: scroll;
   position: absolute;
   height: 40%;
@@ -45,19 +46,15 @@ body {
   top: 30%;
   left: 85%;
   transform: translate(-85%, -30%);
-  color: white;
 }
 .para-container h1 {
   position: sticky;
   top:0;
-
-}
-.para-container p {
-
 }
 
 
-.side-container {
+
+.social-container {
   position: fixed;
   top: 10%;
   display: flex;
@@ -65,13 +62,18 @@ body {
   gap: 50px;
 }
 
+.social-container img {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+/* Media Query on Mobile View-point */
 @media only screen and (max-width: 572px) {
-  .side-container {
-    top: 7%;
+  .social-container {
+    top: 8%;
     gap: 10px;
   }
-  .side-container img {
-    background-color: rgb(255, 255, 255);
+  .social-container img {
+    background-color: rgb(255, 255, 255,0.5);
     width: 2rem;
     height: 2rem;
   }
