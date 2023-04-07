@@ -38,7 +38,6 @@ body {
 }
 
 .para-container {
-  border-radius: 2rem;
   overflow: scroll;
   position: absolute;
   height: 40%;
@@ -46,13 +45,18 @@ body {
   top: 30%;
   left: 85%;
   transform: translate(-85%, -30%);
+  border-radius: 2em;
 }
+
 .para-container h1 {
+  border: 2px solid;
   position: sticky;
   top:0;
 }
-
-
+.para-container p {
+  border: 3px ridge darkcyan;
+  
+}
 
 .social-container {
   position: fixed;
@@ -63,6 +67,7 @@ body {
 }
 
 .social-container img {
+  width: 2em;
   background-color: rgb(255, 255, 255, 0.5);
 }
 
@@ -88,13 +93,16 @@ body {
     font-size: small;
     transform: translate(-95%, -30%);
     color: white;
+    text-align: center;
   }
   .para-container h1 {
+    border: 2px solid;
     position: sticky;
     top:0;
     background-color: rgb(120, 79, 121, 0.9);
   }
   .para-container p {
+    border: 2px solid;
     background-color: rgb(105, 90, 106, 0.9);
   }
   
