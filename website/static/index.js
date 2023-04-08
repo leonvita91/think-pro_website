@@ -25,7 +25,7 @@ class DarkMode {
         // set dark-mode option 
         this.status = localStorage.setItem('enable','DarkMode');
         // switch to dark-logo
-        this.icon = document.querySelector('#Switch-Mode').src="icons/home/light.png";
+        this.icon = document.querySelector('#Switch-Mode').src="static/icons/home/light.png";
         // Define the Classes_background and Colors
         this.classList = [
         '.Dark-nav',
@@ -75,7 +75,7 @@ class DarkMode {
     }
     // Disable Dark-mode
     disableDark() {
-        this.icon = document.querySelector('#Switch-Mode').src="icons/home/dark.png";
+        this.icon = document.querySelector('#Switch-Mode').src="static/icons/home/dark.png";
         this.status = localStorage.setItem('enable','LightMode');
         // Define the Classes_background and Colors
         this.classList = [
