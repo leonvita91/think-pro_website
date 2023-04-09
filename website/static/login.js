@@ -12,8 +12,6 @@ class DarkMode {
         }
 
         // first load animations
-        $('.social-container').hide(0).slideDown(2600).fadeOut(700).fadeIn(700);
-        $('.para-container').hide(0).fadeIn(1000);
         $('.gridsys').hide(0).fadeIn(500);
         $('.naving').hide(0).fadeIn(2000);
         // Callback method
@@ -31,17 +29,13 @@ class DarkMode {
         '.Dark-nav',
         '.darkmode-body',
         '.side-dark-body',
-        '.para-container h1',
-        '.para-container p',
-        '.footer-container'
+        
     ]
         this.colorList = [
         '#1A374D',
         '#406882',
         '#6998AB',
-        '#6998AB',
-        '#1A374D',
-        '#1A374D'
+        
     ]
         //  Apply Looping
         for (let i =0; i < this.classList.length;i++) {
@@ -56,9 +50,6 @@ class DarkMode {
             '.side-nav-login',
             '.side-nav-sign-up',
             '.side-nav-logout',
-            '.para-container h1',
-            '.para-container p',
-            '.footer-container',
             
         ]
         this.colorList = [
@@ -68,9 +59,7 @@ class DarkMode {
             'white',
             'white',
             'white',
-            'white',
-            'white',
-            'white'
+            
         ]
         //  Apply Looping
         for (let i =0; i < this.classList.length;i++) {
@@ -87,17 +76,12 @@ class DarkMode {
             '.Dark-nav',
             '.darkmode-body',
             '.side-dark-body',
-            '.para-container h1',
-            '.para-container p',
-            '.footer-container'
+            
         ]
         this.colorList = [
             '#C3F8FF',
             '#ABD9FF',
             '#ABD9FF',
-            '#ABD9FF',
-            '#ABD9FF',
-            '#ABD9FF'
         ]
         //  Apply Looping
         for (let i =0; i < this.classList.length;i++) {
@@ -112,9 +96,6 @@ class DarkMode {
             '.side-nav-login',
             '.side-nav-sign-up',
             '.side-nav-logout',
-            '.para-container h1',
-            '.para-container p',
-            '.footer-container'
         ]
         this.colorList = [
             'black',
@@ -123,9 +104,7 @@ class DarkMode {
             'black',
             'black',
             'black',
-            'black',
-            'black',
-            'black'
+
         ]
         //  Apply Looping
         for (let i =0; i < this.classList.length;i++) {
