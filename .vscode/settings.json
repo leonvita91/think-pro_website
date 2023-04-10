@@ -6,6 +6,8 @@
         "markdown",
         "latex",
         "plaintext",
-        "javascript"
+        "javascript",
+        "html",
+        "python"
     ]
 }
