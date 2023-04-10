@@ -1,5 +1,13 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
+
+
+
+
 <head>
     {% block title %} 
     <title>
@@ -11,49 +19,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="darkmode-body">
-            <!-- Naving contents -->
-            <div class="naving">
-                <nav class="navbar Dark-nav">
-                    <div class="container-fluid">
-                        <img src="static/icons/home/thinkpro.png" class="rounded-5 thinkpro-logo" style="width: 50px;height:50px; border: 1px solid;">
-                        <a class="navbar-brand logo-color" >THINKPRO</a>
-                        <span>
-                            <img src="static/icons/home/dark.png" id="Switch-Mode" type="button" class="rounded-5 float-end ms-3" width="33px">
-                            <button id="dark-btn"  class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                                <span class="navbar-toggler-icon">
-                                </span>
-                            </button>
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> 
-                                <div class="offcanvas-header  text-white bg-primary"> 
-                                    <h5 class="offcanvas-title logo-color" id="offcanvasNavbarLabel">THINKPRO</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div  class="offcanvas-body side-dark-body">
-                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                        <li  class="nav-item">
-                                            <a class="nav-link active side-nav-home" aria-current="page" href="/">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active side-nav-login" aria-current="page" href="/login">Login</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active side-nav-sign-up" aria-current="page" href="/sign-up">Sign Up</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active side-nav-logout" aria-current="page" href="/logout">Logout</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link side-nav-about-us" href="#">About Us</a>
-                                        </li>
-                                    </div>
-                                </div>
-                            </div>
+<!-- Naving contents -->
+<div class="naving">
+    <nav class="navbar Dark-nav">
+        <div class="container-fluid">
+            <img src="static/icons/home/thinkpro.png" class="rounded-5 thinkpro-logo" style="width: 50px;height:50px; border: 1px solid;">
+            <a class="navbar-brand logo-color" >THINKPRO</a>
+            <span>
+                <img src="static/icons/home/dark.png" id="Switch-Mode" type="button" class="rounded-5 float-end ms-3 Dark-Btn " width="33px">
+                <button id="dark-btn"  class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> 
+                    <div class="offcanvas-header  text-white bg-primary"> 
+                        <h5 class="offcanvas-title logo-color" id="offcanvasNavbarLabel">THINKPRO</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div  class="offcanvas-body side-dark-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li  class="nav-item">
+                                <a class="nav-link active side-nav-home" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active side-nav-login" aria-current="page" href="/login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active side-nav-sign-up" aria-current="page" href="/sign-up">Sign Up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active side-nav-logout" aria-current="page" href="/logout">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link side-nav-about-us" href="#">About Us</a>
+                            </li>
                         </div>
-                    </nav>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-                {% block content %}
+            {% block content %}
+            <body>
+            </body>
 
-                {% endblock %}
+            {% endblock %}
 
 
     <!--custom-->

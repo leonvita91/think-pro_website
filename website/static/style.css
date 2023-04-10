@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+.hid {
+  user-select: none;
+}
+
+
 /* Main grid */
 .gridsys {
   display: grid;
@@ -18,7 +23,10 @@ body {
 
 /* Naving section */
 
+.Dark-Btn {
 
+  background-color: rgb(222, 243, 90, 0.2);
+}
 
 /* Mid section */
 .middel{
