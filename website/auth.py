@@ -13,14 +13,14 @@ def sign_up():
         email = request.form.get('email')
         password = request.form.get('password')
         confirm = request.form.get('confirm_password')
-        if len(name) < 4:
+        if len(name) < 2:
             flash('Create longer Username' ,category='error')
-        elif len(email) < 6:
+        elif len(email) < 4:
             flash('Try longer Email' ,category='error')
         elif len(password) < 8:
             flash('Password Must be at least 8 Characters' ,category='error')
         elif password != confirm :
-            flash(""" The Password Doesn't """ ,category='error')
+            flash(""" The Password Doesn't Match """ ,category='error')
         else:
             flash('Great!... Welcome to Our site :) ' ,category='Success')
     return render_template('signup.html')

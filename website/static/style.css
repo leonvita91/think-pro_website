@@ -134,6 +134,19 @@ body {
 }
 
 
+.rotations-signup {
+  animation: rotate-icons 2s linear 1;
+}
+@keyframes rotate-icons {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 .facebook {
   animation: animate-icons 1s linear 1;
 }
