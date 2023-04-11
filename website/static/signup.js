@@ -13,7 +13,14 @@ class DarkMode {
 
         // first load animations
         $('.gridsys').hide(0).fadeIn(500);
-        $('.naving').hide(0).fadeIn(2000);
+        $('.naving').hide(0).fadeIn(4000);
+        
+        $('.Dark-signup').hide(0).fadeIn(1000);
+        $('.jq-signup').hide(0).fadeIn(2000);
+        $('.jq-form1').hide(0).fadeIn(700);
+        $('.jq-form2').hide(0).fadeIn(1000);
+        $('.jq-form3').hide(0).fadeIn(1500);
+        $('.jq-form4').hide(0).fadeIn(1800);
         // Callback method
         this.active()
     };
@@ -29,12 +36,14 @@ class DarkMode {
         '.Dark-nav',
         '.darkmode-body',
         '.side-dark-body',
+        '.Dark-signup'
         
     ]
         this.colorList = [
         '#1A374D',
         '#406882',
         '#6998AB',
+        '#1A374D'
         
     ]
         //  Apply Looping
@@ -50,9 +59,11 @@ class DarkMode {
             '.side-nav-login',
             '.side-nav-sign-up',
             '.side-nav-logout',
+            '.Dark-SU-text',
             
         ]
         this.colorList = [
+            'white',
             'white',
             'white',
             'white',
@@ -76,12 +87,14 @@ class DarkMode {
             '.Dark-nav',
             '.darkmode-body',
             '.side-dark-body',
+            '.Dark-signup',
             
         ]
         this.colorList = [
             '#C3F8FF',
             '#ABD9FF',
             '#ABD9FF',
+            '#C3F8FF',
         ]
         //  Apply Looping
         for (let i =0; i < this.classList.length;i++) {
@@ -96,6 +109,7 @@ class DarkMode {
             '.side-nav-login',
             '.side-nav-sign-up',
             '.side-nav-logout',
+            '.Dark-SU-text',
         ]
         this.colorList = [
             'black',
@@ -104,6 +118,8 @@ class DarkMode {
             'black',
             'black',
             'black',
+            'black',
+            
 
         ]
         //  Apply Looping
@@ -122,13 +138,27 @@ class DarkMode {
                 $('#Switch-Mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(500);
                 $('#Switch-Mode').animate({padding: '0px'});
                 $('#Switch-Mode').addClass('rotations');
-                
+                $('.jq-signup').addClass('rotations-signup');
+                $('.Dark-signup').hide(0).fadeIn(1000);
+                $('.jq-signup').slideUp(100).slideDown(500);
+                $('.jq-form1').slideUp(100).slideDown(700);
+                $('.jq-form2').slideUp(100).slideDown(1000);
+                $('.jq-form3').slideUp(100).slideDown(1500);
+                $('.jq-form4').slideUp(100).slideDown(2000);
                     
             } else {
                 this.disableDark()
                 $('#Switch-Mode').animate({padding: '10px 20px 30px 50px'}).fadeIn(1000);
                 $('#Switch-Mode').animate({padding: '0px'});
                 $('#Switch-Mode').addClass('rotations');
+                
+                $('.jq-signup').addClass('rotations-signup');
+                $('.Dark-signup').hide(0).fadeIn(1000);
+                $('.jq-signup').slideUp(100).slideDown(500);
+                $('.jq-form1').slideUp(100).slideDown(700);
+                $('.jq-form2').slideUp(100).slideDown(1000);
+                $('.jq-form3').slideUp(100).slideDown(1500);
+                $('.jq-form4').slideUp(100).slideDown(2000);
             }
         });
     }
