@@ -75,7 +75,7 @@ body {
 /* Media Query on Mobile View-point */
 @media only screen and (max-width: 572px) {
   .social-container {
-    top: 8%;
+    top: 15%;
     gap: 10px;
   }
   .social-container img {
