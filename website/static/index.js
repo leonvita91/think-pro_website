@@ -1,3 +1,9 @@
+// scroll reaval for animations
+// <script defer src="https://unpkg.com/scrollreveal"></script>
+// all_class.forEach(function(all){
+  // ScrollReveal().reveal(all);
+// });
+
 // Dark Mode Class
 class DarkMode {
     constructor() {
